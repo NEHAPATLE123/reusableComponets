@@ -1,0 +1,19 @@
+
+<h1 class="bg-danger text-center p-3"> Reusable Components </h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 mb-4" *ngFor="let std of reels">
+      <div class="card">
+        <div class="card-header">
+          {{std.title}}
+        </div>
+        <div class="card-body">
+          <img src="{{std.img}}" class="img-round img-fluid" alt="img" title="img">
+          <p>
+          <app-like [propertyBin]="std.isLiked" (customeEve)="callBack($event, std.id)"></app-like>  {{std.likeCount}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
